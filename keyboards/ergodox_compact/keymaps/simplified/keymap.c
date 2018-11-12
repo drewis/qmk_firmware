@@ -30,11 +30,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [0] = KEYMAP( /* Base */
-		KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  ,                            KC_NO  ,KC_NO  ,KC_NO  ,KC_NO ,KC_NO  ,KC_NO  ,
-		KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,                               KC_F,   KC_G,   KC_C,   KC_R,  KC_L,   KC_BSPC,
-		KC_LCTL, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,                               KC_D,   KC_H,   KC_T,   KC_N,  KC_S,   KC_MINS,
-		KC_LSPO, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,   OSL(2),       OSL(1),       KC_B,   KC_M,   KC_W,   KC_V,  KC_Z,   KC_RSPC,
-		KC_CAPS, KC_SLSH, KC_GRV,KC_LALT, KC_LGUI, KC_SPC, LT(1,KC_ESC), LT(2,KC_DEL), KC_ENT, KC_LEFT,KC_DOWN,KC_UP, KC_RGHT,KC_RCTL),
+		KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  ,                 KC_NO  ,KC_NO  ,KC_NO  ,KC_NO ,KC_NO  ,KC_NO  ,
+		KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,                    KC_F,   KC_G,   KC_C,   KC_R,  KC_L,   KC_BSPC,
+		LCTL_T(KC_ESC),
+		         KC_A,    KC_O,    KC_E,    KC_U,    KC_I,                    KC_D,   KC_H,   KC_T,   KC_N,  KC_S,   KC_MINS,
+		KC_LSPO, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X, OSL(2), OSL(1),    KC_B,   KC_M,   KC_W,   KC_V,  KC_Z,   KC_RSPC,
+		KC_CAPS, KC_SLSH, KC_DEL,  KC_LALT, KC_LGUI, MO(1),KC_SPC, KC_ENT,    MO(2),  KC_LEFT,KC_DOWN,KC_UP, KC_RGHT,RCTL_T(KC_DEL)),
 /* Raise
  * ,-----------------------------------------------------------------------------------.
  * |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
