@@ -38,8 +38,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [0] = LAYOUT( /* Base */
 		KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,                    KC_F,   KC_G,   KC_C,   KC_R,  KC_L,   KC_BSPC,
 		LCTL_T(KC_ESC),
-		         KC_A,    KC_O,    KC_E,    KC_U,    KC_I,  RGB_TOG,RGB_MOD,  KC_D,   KC_H,   KC_T,   KC_N,  KC_S,   RCTL_T(KC_MINS),
-		KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,  OSL(2), OSL(1),   KC_B,   KC_M,   KC_W,   KC_V,  KC_Z,   KC_RSFT,
+		         KC_A,    KC_O,    KC_E,    KC_U,    KC_I,  KC_NO,  KC_NO,    KC_D,   KC_H,   KC_T,   KC_N,  KC_S,   RCTL_T(KC_MINS),
+		KC_LSPO, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,  OSL(2), OSL(1),   KC_B,   KC_M,   KC_W,   KC_V,  KC_Z,   KC_RSPC,
 		KC_CAPS, KC_NO,   KC_SLSH, KC_LALT, KC_LGUI, MO(1), KC_SPC, KC_ENT,   MO(2),  KC_LEFT,KC_DOWN,KC_UP, KC_RGHT,KC_DEL),
 /* Raise
  * ,-----------------------------------------------------------------------------------.
@@ -54,8 +54,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [1] = LAYOUT( /* L1 */
 		KC_GRV ,KC_1,      KC_2,      KC_3,      KC_4,      KC_5,                      KC_6,   KC_7,   KC_8,   KC_9,   KC_0,   KC_BSPC,
-		_______,KC_F1,     KC_F2,     KC_F3,     KC_F4,     KC_F5,     _______,_______,KC_LABK, KC_PLUS,KC_LCBR,KC_RCBR,_______,KC_PIPE,
-		_______,LCTL(KC_Z),LCTL(KC_X),LCTL(KC_C),LCTL(KC_V),LCTL(KC_A),_______,_______,_______,KC_EQL, KC_LBRC,KC_RBRC,_______,_______,
+		_______,KC_F1,     KC_F2,     KC_F3,     KC_F4,     KC_F5,     _______,_______,_______,KC_PLUS,KC_LCBR,KC_RCBR,_______,KC_PIPE,
+		_______,LGUI(KC_Z),LGUI(KC_X),LGUI(KC_C),LGUI(KC_V),LGUI(KC_A),_______,_______,_______,KC_EQL, KC_LBRC,KC_RBRC,_______,_______,
 		_______,_______,   _______,   _______,   _______,   _______,   _______,_______,_______,KC_HOME,KC_PGDN,KC_PGUP,KC_END, _______),
 /* Lower
  * ,-----------------------------------------------------------------------------------.
@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [2] = LAYOUT( /* L2 */
 		KC_TILD,KC_EXLM,KC_AT,  KC_HASH,KC_DLR, KC_PERC,                KC_CIRC,KC_AMPR,KC_ASTR,KC_LPRN,KC_RPRN,KC_BSPC,
-		_______,KC_F6,  KC_F7,  KC_F8,  KC_F9,  KC_F10, _______,_______,KC_RABK,KC_EXLM,KC_LCBR,KC_RCBR,_______,KC_BSLS,
+		_______,KC_F6,  KC_F7,  KC_F8,  KC_F9,  KC_F10, _______,_______,_______,KC_EXLM,KC_LCBR,KC_RCBR,_______,KC_BSLS,
 		_______,_______,_______,_______,_______,_______,_______,_______,_______,KC_EQL ,KC_LBRC,KC_RBRC,_______,_______,
 		_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______),
 [3] = LAYOUT( /* L3 */

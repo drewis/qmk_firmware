@@ -17,19 +17,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x5989
-#define DEVICE_VER      0x1001
-#define MANUFACTURER    DREWIS
-#define PRODUCT         American Kestrel
-#define DESCRIPTION     A compact but fierce predator
-
-/* key matrix size */
-#define MATRIX_ROWS 9
-#define MATRIX_COLS 6
+#undef DEVICE_VER
+#define DEVICE_VER      0x1002
 
 /*
  * Keyboard Matrix Assignments
@@ -41,12 +30,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { F1, F0, B1, B2, B3, E6, C6, D0, D1 }
-#define MATRIX_COL_PINS { F6, F5, F4, B5, B6, B7 }
+#undef MATRIX_ROW_PINS
+#undef MATRIX_COL_PINS
+#define MATRIX_ROW_PINS { B4, B3, B2, B1, B0, B8, B13, B14, B15 }
+#define MATRIX_COL_PINS { B7, B6, B5, A0, A1, A2 }
 //#define UNUSED_PINS
-
-/* COL2ROW, ROW2COL, or CUSTOM_MATRIX */
-#define DIODE_DIRECTION COL2ROW
 
 // #define BACKLIGHT_PIN B7
 // #define BACKLIGHT_BREATHING
@@ -75,7 +63,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #endif
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCING_DELAY 5
+//#define DEBOUNCING_DELAY 5
+#define DEBOUNCE 6
 
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST
@@ -83,9 +72,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* number of backlight levels */
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-#define LOCKING_SUPPORT_ENABLE
+//#define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
-#define LOCKING_RESYNC_ENABLE
+//#define LOCKING_RESYNC_ENABLE
 
 /* If defined, GRAVE_ESC will always act as ESC when CTRL is held.
  * This is userful for the Windows task manager shortcut (ctrl+shift+esc).
@@ -126,9 +115,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 /* key combination for magic key command */
-#define IS_COMMAND() ( \
+/*#define IS_COMMAND() ( \
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
-)
+)*/
 
 /* control how magic key switches layers */
 //#define MAGIC_KEY_SWITCH_LAYER_WITH_FKEYS  true
