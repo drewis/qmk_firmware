@@ -24,12 +24,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT_ID      0x5919
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    drewis
-#define PRODUCT         drewis_key19
+#define PRODUCT         key19
 #define DESCRIPTION     A first attempt
 
 /* key matrix size */
 #define MATRIX_ROWS 4
-#define MATRIX_COLS 5
+//pcb only 5 cols, 10 for handwire double up
+#define MATRIX_COLS 10
 
 /*
  * Keyboard Matrix Assignments
@@ -41,8 +42,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { D4, D7, B6, F5 }
-#define MATRIX_COL_PINS { B7, D6, B4, F7, F6 }
+#define MATRIX_ROW_PINS { C6, B3, B1, D3 }
+//the first 5 of these are on pcb, the second 5 are random from 
+//handwired connection to a second pcb
+#define MATRIX_COL_PINS { F0, F1, B2, D0, D1, F4, B5, B6, B7, F5 }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL, or CUSTOM_MATRIX */
