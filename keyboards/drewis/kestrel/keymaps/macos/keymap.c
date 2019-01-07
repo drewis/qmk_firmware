@@ -49,8 +49,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [0] = LAYOUT( /* Base */
 		KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,                   KC_F,   KC_G,   KC_C,   KC_R,  KC_L,   KC_BSPC,
 		CTL_ESC, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,  SPOTLIT,KC_NO,   KC_D,   KC_H,   KC_T,   KC_N,  KC_S,   CTL_MIN,
-		KC_NO,   KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,  SCRSHT, KC_NO,   KC_B,   KC_M,   KC_W,   KC_V,  KC_Z,   KC_NO,
-		KC_CAPS, KC_DEL,  KC_LGUI, KC_LALT, KC_LSFT, RAISE, KC_SPC, KC_ENT,  LOWER,  KC_RSFT,KC_LEFT,KC_DOWN,KC_UP, KC_RGHT),
+		KC_LEFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,  SCRSHT, KC_NO,   KC_B,   KC_M,   KC_W,   KC_V,  KC_Z,   KC_RGHT,
+		KC_CAPS, KC_DEL,  KC_LGUI, KC_LALT, KC_LSFT, RAISE, KC_SPC, KC_ENT,  LOWER,  KC_RSFT,KC_DOWN,KC_UP,_______,_______),
 /* Raise
  * ,-----------------------------------------------------------------------------------.
  * |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
@@ -88,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [3] = LAYOUT( /* L3 */
 		_______,_______,_______,_______,_______,_______,                _______,_______,_______,_______,_______,_______,
 		_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,
-		_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,
+		_______,_______,_______,_______,_______,_______,_______,_______,_______,KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,_______,
 		_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______),
 };
 
