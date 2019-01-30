@@ -26,6 +26,7 @@
 #define BSLS_CTL RCTL_T(KC_BSLS)
 #define PIPE_CTL RCTL_T(KC_PIPE)
 #define DEL_ALT LALT_T(KC_DEL)
+#define BAK_ALT RALT_T(KC_BSPC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* DVORAK
@@ -43,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_QUOT, KC_COMM, KC_DOT,  KC_P  , KC_Y  , KC_F  , KC_G  , KC_C  , KC_R  , KC_L  ,
   KC_A,    KC_O,    KC_E,    KC_U,   KC_I,   KC_D,   KC_H,   KC_T,   KC_N,   KC_S,
   KC_SCLN, KC_Q,    KC_J,    KC_K,   KC_X,   KC_B,   KC_M,   KC_W,   KC_V,   KC_Z,
-  ESC_CTL, DEL_ALT, KC_LSFT, MO(1),  KC_SPC, KC_ENT, MO(2),  KC_RSFT,KC_RALT,MIN_CTL
+  ESC_CTL, DEL_ALT, KC_LSFT, MO(1),  KC_SPC, KC_ENT, MO(2),  KC_RSFT,BAK_ALT,MIN_CTL
   ),
 /* Raise
  * ,---------------------------------------------------------------------.
@@ -57,10 +58,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `---------------------------------------------------------------------'
  */
 [1] = LAYOUT_double(
-  KC_GRV,  RGB_M_P, RGB_M_B, RGB_M_SW,RGB_TOG, _____,   KC_LBRC, KC_RBRC, KC_EQL, KC_QUES,
+  KC_GRV,  RGB_M_P, RGB_M_SW,RGB_TOG, _____,   _____,   KC_LBRC, KC_RBRC, KC_EQL, KC_QUES,
   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,   KC_9,    KC_0,
   C_Z,     C_X,     C_C,     C_V,     C_A,     _____,   KC_LEFT, KC_DOWN,KC_UP,   KC_RIGHT,
-  _____, _____,   _____,     _____,   KC_BSPC, KC_TAB,   _____,  _____, _____,    BSLS_CTL
+  _____, _____,   _____,     _____,   KC_TAB,  _____, _____,  _____, _____,       BSLS_CTL
 		),
 /* LOWER
  * ,---------------------------------------------------------------------.
@@ -74,10 +75,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `---------------------------------------------------------------------'
  */
 [2] = LAYOUT_double(
-  KC_TILD, RGB_M_P, RGB_M_B, RGB_M_SW,RGB_TOG, _____,   KC_LCBR, KC_RCBR,KC_PLUS, KC_SLSH,
+  KC_TILD, RGB_M_P, RGB_M_SW,RGB_TOG, _____,   _____,   KC_LCBR, KC_RCBR,KC_PLUS, KC_SLSH,
   KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR,KC_LPRN, KC_RPRN,
   C_Z,     C_X,     C_C,     C_V,     C_A,     _____,   KC_LEFT, KC_DOWN,KC_UP,   KC_RIGHT,
-  _____, _____,   _____,     _____,   KC_BSPC, KC_TAB,  _____,   _____, _____,    PIPE_CTL
+  _____, _____,   _____,     _____,   KC_TAB,  _____,  _____,   _____, _____,     PIPE_CTL
 		)
 };
 
