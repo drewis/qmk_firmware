@@ -27,7 +27,8 @@
 #define PIPE_CTL RCTL_T(KC_PIPE)
 #define DEL_ALT LGUI_T(KC_DEL)
 //#define BAK_ALT LGUI_T(KC_BSPC)
-#define SPTLITE LSFT(KC_SPC)
+#define SPTLITE LGUI(KC_SPC)
+#define SCRSHOT LGUI(LSFT(KC_4))
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* DVORAK
@@ -59,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `---------------------------------------------------------------------'
  */
 [1] = LAYOUT_double(
-  KC_GRV,  RGB_M_P, RGB_M_SW,RGB_TOG, SPTLITE, _____,   KC_LBRC, KC_RBRC, KC_EQL, KC_QUES,
+  KC_GRV,  RGB_M_P, RGB_M_SW,RGB_TOG, SPTLITE, SCRSHOT, KC_LBRC, KC_RBRC, KC_EQL, KC_QUES,
   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,   KC_9,    KC_0,
   C_Z,     C_X,     C_C,     C_V,     C_A,     _____,   KC_LEFT, KC_DOWN,KC_UP,   KC_RIGHT,
   _____, _____,   _____,     _____,   KC_TAB,  _____,   _____,  _____, _____,     BSLS_CTL
@@ -76,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `---------------------------------------------------------------------'
  */
 [2] = LAYOUT_double(
-  KC_TILD, RGB_M_P, RGB_M_SW,RGB_TOG, SPTLITE, _____,   KC_LCBR, KC_RCBR,KC_PLUS, KC_SLSH,
+  KC_TILD, RGB_M_P, RGB_M_SW,RGB_TOG, SPTLITE, SCRSHOT, KC_LCBR, KC_RCBR,KC_PLUS, KC_SLSH,
   KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR,KC_LPRN, KC_RPRN,
   C_Z,     C_X,     C_C,     C_V,     C_A,     _____,   KC_LEFT, KC_DOWN,KC_UP,   KC_RIGHT,
   _____, _____,   _____,     _____,   KC_TAB,  _____,   _____,   _____, _____,    PIPE_CTL
