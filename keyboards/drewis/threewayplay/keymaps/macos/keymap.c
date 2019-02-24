@@ -36,21 +36,21 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Dvorak
- * ,-------------------------------------------------------------------------------------------------.
- * | Tab  |   "  |   ,  |   .  |   P  |   Y  |             |   F  |   G  |   C  |   R  |   L  | Bksp |
- * |------+------+------+------+------+-------------+------+------+------+------+------+------+------|
- * | Esc  |   A  |   O  |   E  |   U  |   I  |SPTLIT|      |   D  |   H  |   T  |   N  |   S  |  /   |
- * |------+------+------+------+------+------|------+------+------+------+------+------+------+------|
- * | Shift|   ;  |   Q  |   J  |   K  |   X  |      |      |   B  |   M  |   W  |   V  |   Z  |Enter |
- * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
- * | CAPS | /    | Ctrl | Alt  |Shift |Lower |Space |Enter |Raise | Left | Down |  Up  |Right |Del   |
- * `-------------------------------------------------------------------------------------------------'
+ * ,-----------------------------------------------------------------------------------.
+ * | Tab  |   "  |   ,  |   .  |   P  |   Y  |   F  |   G  |   C  |   R  |   L  | Bksp |
+ * |------+------+------+------+------+-------------+------+------+------+------+------|
+ * |EscCtl|   A  |   O  |   E  |   U  |   I  |   D  |   H  |   T  |   N  |   S  | - Ctl|
+ * |------+------+------+------+------+------|------+------+------+------+------+------|
+ * | Shift|   ;  |   Q  |   J  |   K  |   X  |   B  |   M  |   W  |   V  |   Z  |Shift |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | CAPS | Del  | Alt  | GUI  |Raise |Space |Enter |Lower | Left | Down |  Up  |Right |
+ * `-----------------------------------------------------------------------------------'
  */
 [0] = LAYOUT( /* Base */
 		KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,  KC_F,   KC_G,   KC_C,   KC_R,  KC_L,   KC_BSPC,
 		CTL_ESC, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,  KC_D,   KC_H,   KC_T,   KC_N,  KC_S,   CTL_MIN,
-		KC_LEFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,  KC_B,   KC_M,   KC_W,   KC_V,  KC_Z,   KC_RGHT,
-	        KC_DEL,  KC_LGUI, KC_LALT, KC_LSFT, RAISE,  KC_SPC, KC_ENT, LOWER,  KC_RSFT,KC_DOWN,KC_UP, KC_CAPS),
+		KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,  KC_B,   KC_M,   KC_W,   KC_V,  KC_Z,   KC_RSFT,
+	        KC_CAPS, KC_DEL,  KC_LALT, KC_LGUI, RAISE,   KC_SPC,KC_ENT,LOWER,   KC_LEFT,KC_DOWN,KC_UP, KC_RIGHT),
 /* Raise
  * ,-----------------------------------------------------------------------------------.
  * |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
