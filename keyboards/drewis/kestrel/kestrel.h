@@ -24,6 +24,21 @@
  * The second converts the arguments into a two-dimensional array which
  * represents the switch matrix.
  */
+
+#ifdef KESTREL_BRIDGED
+#define LAYOUT( \
+    k101, k102, k103, k104, k105, k106, k107, k108, k109, k110, k111, k112, \
+    k201, k202, k203, k204, k205, k206, k207, k208, k209, k210, k211, k212, \
+    k301, k302, k303, k304, k305, k306, k307, k308, k309, k310, k311, k312, \
+    k401, k402, k403, k404, k405, k406, k407, k408, k409, k410, k411, k412  \
+) \
+{ \
+    { k101, k102, k103, k104, k105, k106, k107, k108, k109, k110, k111, k112 }, \
+    { k201, k202, k203, k204, k205, k206, k207, k208, k209, k210, k211, k212 }, \
+    { k301, k302, k303, k304, k305, k306, k307, k308, k309, k310, k311, k312 }, \
+    { k401, k402, k403, k404, k405, k406, k407, k408, k409, k410, k411, k412 }, \
+}
+#else
 #define LAYOUT( \
     k11, k12, k13, k14, k15, k16, k56, k55, k54, k53, k52, k51, \
     k21, k22, k23, k24, k25, k26, k66, k65, k64, k63, k62, k61, \
@@ -40,4 +55,4 @@
     { k71, k72, k73, k74, k75, k76 }, \
     { k81, k82, k83, k84, k85, k86 }, \
 }
-
+#endif
