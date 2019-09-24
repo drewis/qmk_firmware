@@ -18,6 +18,7 @@
 #define _______ KC_TRNS
 #define RAISE MO(1)
 #define LOWER MO(2)
+#define FUNC1 MO(3)
 #define CTL_ESC LCTL_T(KC_ESC)
 #define CTL_MIN RCTL_T(KC_MINS)
 #define C_Z LCTL(KC_Z)
@@ -27,6 +28,7 @@
 #define C_A LCTL(KC_A)
 #define SPOTLIT LGUI(KC_SPC)
 #define SCRSHT LGUI(LSFT(KC_4))
+#define LKSCR LCTL(LALT(KC_L))
 
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes {
@@ -47,15 +49,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [0] = LAYOUT( /* Base */
-		KC_NO,   KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,                                      KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_NO,
-		KC_TAB,  KC_A,    KC_O,    KC_E,    KC_U,    KC_I,                                      KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_BSPC,
-		CTL_ESC, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_MINS,
-	        KC_NO,   KC_DEL,  KC_LALT, KC_LGUI, KC_NO,   KC_SPC,  RAISE, KC_LSFT, KC_RSFT, LOWER,   KC_ENT,  KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,KC_RCTL),
+		KC_NO,   KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,                                        KC_F,   KC_G,    KC_C,    KC_R,    KC_L,    LKSCR,
+		KC_TAB,  KC_A,    KC_O,    KC_E,    KC_U,    KC_I,                                        KC_D,   KC_H,    KC_T,    KC_N,    KC_S,    KC_BSPC,
+		CTL_ESC, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    FUNC1,   KC_NO,   KC_NO,   KC_NO,   KC_B,   KC_M,    KC_W,    KC_V,    KC_Z,    KC_MINS,
+	        KC_LSFT, KC_DEL,  KC_LALT, KC_LGUI, KC_NO,   KC_SPC,  KC_ENT,  KC_LSFT, KC_RSFT, RAISE,   LOWER,  KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,KC_RSFT),
 /*
  * Raise
  */
 [1] = LAYOUT( /* L1 */
-		_______,_______,_______,_______,_______,_______,                                _______,_______,_______,_______,KC_QUES,_______,
+		_______,_______,_______,_______,_______,_______,                                _______,_______,_______,KC_QUES,KC_SLSH,_______,
 		KC_GRV, KC_1,   KC_2,   KC_3,   KC_4,   KC_5,                                   KC_6,   KC_7,   KC_8,   KC_9,   KC_0,   _______,
 		_______,C_Z,    C_X,    C_C,    C_V,    C_A,    _______,_______,_______,_______,KC_PLUS,KC_EQL, KC_RABK,KC_LBRC,KC_RBRC,KC_PIPE,
 		_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,KC_HOME,KC_PGDN,KC_PGUP,KC_END,_______),
@@ -63,9 +65,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Lower
  */
 [2] = LAYOUT( /* L2 */
-		_______,_______,_______,_______,_______,_______,                               _______,_______,_______,KC_QUES,KC_SLSH,_______,
-		KC_TILD,KC_EXLM,KC_AT,  KC_HASH,KC_DLR, KC_PERC,                               KC_CIRC,KC_AMPR,KC_ASTR,KC_LPRN,KC_RPRN,_______,
-		_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,KC_EXLM,KC_EQL,KC_LABK,KC_LCBR,KC_RCBR,KC_BSLS,
+		_______,_______,_______,_______,_______,_______,                                _______,_______,_______,_______,_______,_______,
+		KC_TILD,KC_EXLM,KC_AT,  KC_HASH,KC_DLR, KC_PERC,                                KC_CIRC,KC_AMPR,KC_ASTR,KC_LPRN,KC_RPRN,_______,
+		_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,KC_EXLM,KC_EQL, KC_LABK,KC_LCBR,KC_RCBR,KC_BSLS,
+		_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______),
+/*
+ * Lower
+ */
+[3] = LAYOUT( /* L3 */
+		_______,KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5  ,		                KC_F6,  KC_F7,  KC_F8,  KC_F9,  KC_F10, _______,
+		_______,_______,_______,_______,_______,_______,                                _______,_______,_______,_______,_______,_______,
+		_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,
 		_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______),
 };
 
