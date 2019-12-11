@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [0] = LAYOUT( /* Base */
 		KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,   KC_Y,   KC_F,   KC_G,   KC_C,   KC_R,   KC_L,   KC_BSPC,
-		CTL_ESC, KC_A,    KC_O,    KC_E,    KC_U,   KC_I,   KC_D,   KC_H,   KC_T,   KC_N,   KC_S,   CTL_MIN,
+		CTL_ESC, KC_A,    KC_O,    KC_E,    KC_U,   KC_I,   KC_D,   KC_H,   KC_T,   KC_N,   KC_S,   KC_MINS,
 		KC_LEFT, KC_SCLN, KC_Q,    KC_J,    KC_K,   KC_X,   KC_B,   KC_M,   KC_W,   KC_V,   KC_Z,   KC_RIGHT,
 	        KC_DEL,  KC_LALT, KC_LGUI, KC_SPC,  RAISE,  KC_LSFT,KC_RSFT,LOWER,  KC_ENT, KC_DOWN,KC_UP,  KC_CAPS),
 /* Raise
@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [1] = LAYOUT( /* L1 */
-		KC_GRV ,_______,_______,_______,KC_NO,  KC_NO, KC_NO,   KC_NO,  KC_NO,  KC_NO,  KC_QUES,_______,
+		KC_GRV ,_______,_______,_______,KC_NO,  KC_NO, KC_NO,   KC_NO,  KC_NO,  _______,_______,_______,
 		_______,KC_1,   KC_2,   KC_3,   KC_4,   KC_5,  KC_6,    KC_7,   KC_8,   KC_9,   KC_0,   KC_PIPE,
 		KC_HOME,C_Z,    C_X,    C_C,    C_V,    C_A,   KC_PLUS, KC_EQL, KC_RABK,KC_LBRC,KC_RBRC,KC_END,
 		_______,_______,_______,_______,_______,_______,_______,_______,_______,KC_PGDN,KC_PGUP,_______),
@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [2] = LAYOUT( /* L2 */
-		KC_TILD,_______,_______,_______,KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO  ,KC_SLSH,_______,
+		KC_TILD,_______,_______,_______,KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  _______,KC_SLSH,_______,
 		_______,KC_EXLM,KC_AT,  KC_HASH,KC_DLR, KC_PERC,KC_CIRC,KC_AMPR,KC_ASTR,KC_LPRN,KC_RPRN,KC_BSLS,
 		_______,_______,_______,_______,_______,_______,KC_EXLM,KC_EQL, KC_LABK,KC_LCBR,KC_RCBR,_______,
 		_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______),
