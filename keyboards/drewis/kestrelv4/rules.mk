@@ -17,4 +17,4 @@ RGBLIGHT_ENABLE = no
 # SERIAL_LINK_ENABLE = yes
 
 CUSTOM_MATRIX = yes
-SRC += matrix.c tca9555.c drivers/arm/i2c_master.c
+SRC += matrix.c tca9555.c drivers/chibios/i2c_master.c
